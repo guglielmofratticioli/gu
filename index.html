@@ -8,8 +8,8 @@
 
         :root {
             --primary-color: #2d3436;
-            --secondary-color: #dfe6e9;
-            --tertiary-color: #00b894;
+            --secondary-color: ;
+            --tertiary-color: hsl(168, 100%, 36%);
 
         }
 
@@ -29,6 +29,8 @@
             align-items: center;
         }
         .bio{
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 5%;
             color: var(--primary-color);
         }
         .container {
@@ -37,7 +39,7 @@
             background-size: cover;
             background-position: center;
             max-width: 100%;
-            margin: 10 auto;
+            margin: 10%;
             min-width: 10%;
         }
 
@@ -56,7 +58,7 @@
             /* Stack the cards vertically */
             align-items: center;
             /* Center the cards horizontally */
-            width: 80%;
+            width: 90%;
             /* Set the container width to 80% of the screen */
             margin: 0 auto;
             /* Center the container */
@@ -65,15 +67,17 @@
 
         /* Define the card style */
         .card {
+            opacity: 85%;
             white-space: inherit;
             overflow: hidden;
             display: flex;
-            background-color: var(--secondary-color);
+            background-color: rgba(255, 255, 255, 0.8);
             align-items: center;
             /* Align the icon and the text vertically */
-            width: 100%;
+            width: 99%;
             /* Set the card width to 100% of the container */
             height: 10%;
+            border: #2d3436 solid 1px;
             /* Set the card height to 10% of the container */
             border-radius: 10px;
             vertical-align: center;
@@ -82,11 +86,14 @@
         }
 
         .card:hover {
+            opacity: 100%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transform: translateY(-5px);
+            opacity: 100%;
         }
 
         .card {
+            position: relative;
             white-space: nowrap;
             display: flex;
             vertical-align: middle;
@@ -102,6 +109,20 @@
             /* Set the icon height to 80% of the card */
             margin: 10px;
             /* Add some margin around the icon */
+        }
+
+        .card a {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: wavy;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .line{
+            width: 5%;
+            background-color: var(--primary-color);
+            opacity: 100%;
         }
 
 
@@ -221,11 +242,26 @@
             <!-- First card -->
             <div class="card">
                 <!-- SVG square icon -->
-                <img src="fiverr-1.svg" alt=""><a>ciao ciao ciao ciao ciao </a>
+                <a href="https://www.fiverr.com/gumusic">
+                <img src="fiverr-1.svg" alt=""> 
+                <div class="line">
+                </div>
+                <div class="text" style="color:olive">
+                    https://www.fiverr.com/gumusic 
+                </div>
+                </a>
             </div>
+           
             <div class="card">
                 <!-- SVG square icon -->
-                <img src="youtube.svg" alt="">
+                <a href=" https://www.youtube.com/@gu4986">
+                    <img src="youtube.svg" alt=""> 
+                    <div class="line">
+                    </div>
+                    <div class="text" style="color:red">
+                        https://www.youtube.com/@gu4986
+                    </div>
+                    </a>
             </div>
             <div class="card">
                 <!-- SVG square icon -->
@@ -242,11 +278,13 @@
             <div class="wave"></div>
         </div>
         <div class="bio">
-            <h2 style=" line-height:  150%; padding: 5%;"> Bio </h2>
             <p style=" line-height:  150%; padding: 5%;">
                 Hello! I'm Guglielmo, a computer science student who is passionate about music technologies.
                 <br>
                 <br> I enjoy creating music for various media, such as video games, animation, vlogs, and movies.
+                <br>
+                <br>
+                hello world !!
             </p>
     
         </div>
