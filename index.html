@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Personal Website</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      :root {
+        --primary-color: #2d3436;
+        --secondary-color: #dfe6e9;
+        --tertiary-color: #00b894;
+        
+      }
+      body {
+        font-size: large;
+        font-family: 'Indie Flower', regular;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        display: flex;
+        
+        align-items: center;
+        }
+        .title span{
+            color: var(--secondary-color);
+        }
+
+        .title:before,
+        .title:after {
+        content: "";
+        flex: 1;
+        border-bottom: .25em dashed var(--secondary-color);
+        }
+
+        .title:before {
+        margin-right: .25em;
+        }
+
+        .title:after {
+        margin-left: .25em;
+        }
+      .container {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 2%;
+      }
+      .section-divider {
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 2% 0;
+      }
+      .card {
+        background-color: var(--secondary-color);
+        border-radius: 5px;
+        width: 100%;
+        aspect-ratio: 4/3;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 5%;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        width: calc(50% - 4%);
+        float: left;
+      }
+      .card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transform: translateY(-5px);
+      }
+      .card a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      .card img {
+        margin: 10%;
+        height: 80%;
+        width: 80%;
+      }
+      .card-title {
+        font-size: larger;
+        font-weight: bold;
+        margin-bottom: 1%;
+        color: black
+      }
+      .card-divider {
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin-bottom: 1%;
+      }
+      .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 1%;
+          max-width:none;
+          width:auto;
+          margin-left:auto;
+          margin-right:auto;
+          display:block;
+          float:none;
+          clear:both;
+        }
+        .card {
+          width: calc(100% - 4%);
+          float:none;
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+        }
+      }
+      .bouncing-balls {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border: 2px solid white;
+        overflow: hidden;
+      }
+      .ball {
+        position: absolute;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        animation: bounce 3s ease-in-out infinite;
+      }
+      .ball:nth-child(1) {
+        left: 25%;
+        animation-delay: 0s;
+      }
+      .ball:nth-child(2) {
+        left: 50%;
+        animation-delay: 0.2s;
+      }
+      .ball:nth-child(3) {
+        left: 75%;
+        animation-delay: 0.4s;
+      }
+
+    @keyframes move{
+
+            0%
+            {
+                background-position: 0 0;
+            }
+
+            100%
+            {
+                background-position: -100px 0;
+            }
+
+        }
+    .wave-divider{
+        position: relative;
+        transform: scaleY(1000%);
+
+        border-radius: 100%;
+    }
+    .wave
+    {
+
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 10px;
+        width: 100%;
+        transform: scaleX(2);
+        background-image: url(horizontal-line.svg);
+        background-size: 20px 100%;
+        background-position: 10% 10;
+        background-repeat: repeat-x;
+        animation: move 5s linear infinite;
+    }
+    @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-180px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="title">
+            <span>
+                <h1 style="padding: 5%;">Gu </h1>
+            </span>
+        </div>
+        <h2>Music production :</h2>
+        <div class="card-container">
+          <div class="card">
+              <div class="card-title">Fiverr</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Twitter profile URL here]">
+                <img src="fiverr-1.svg">
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-title">Youtube</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Instagram profile URL here]">
+                <img src="youtube.svg" alt="youtube">
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-title">Soundcloud</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Twitter profile URL here]">
+                  <img src="Antu_soundcloud.svg">
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-title">Musescore</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Twitter profile URL here]">
+                  <img src="musescore.svg">
+              </a>
+            </div>
+        </div>
+        <h2>Computer Science :</h2>
+        <div class="card-container">
+          <div class="card">
+              <div class="card-title">Twitter</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Twitter profile URL here]">
+                <i class="fab fa-twitter"></i> Follow me
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-title">Instagram</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Instagram profile URL here]">
+                <i class="fab fa-instagram"></i> Follow me
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-title">Twitter</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Twitter profile URL here]">
+                <i class="fab fa-twitter"></i> Follow me
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-title">Twitter</div>
+              <div class="card-divider"></div>
+              <a href="[Insert your Twitter profile URL here]">
+                <i class="fab fa-twitter"></i> Follow me
+              </a>
+            </div>
+        </div>
+  
+
+      <div class="wave-divider">
+        <div class="wave"></div>
+      </div>
+      <h2 style=" line-height:  150%; padding: 5%;"> Bio </h2>
+      <p style=" line-height:  150%; padding: 5%;">
+        Hello! I'm Guglielmo, a computer science student who is passionate about music technologies. 
+        <br>
+        <br> I enjoy creating music for various media, such as video games, animation, vlogs, and movies. 
+
+      </p>
+      
+      <div class="wave-divider">
+        <div class="wave"></div>
+      </div>
+
+      
+      <!-- Add more cards with links to your social profiles here -->
+      <div class="section-divider"></div>
+
+      <div class="bouncing-balls">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
