@@ -20,26 +20,8 @@
       }
       .title {
         display: flex;
-        
+        justify-content: center;
         align-items: center;
-        }
-        .title span{
-            color: var(--secondary-color);
-        }
-
-        .title:before,
-        .title:after {
-        content: "";
-        flex: 1;
-        border-bottom: .25em dashed var(--secondary-color);
-        }
-
-        .title:before {
-        margin-right: .25em;
-        }
-
-        .title:after {
-        margin-left: .25em;
         }
       .container {
         max-width: 80%;
@@ -51,49 +33,50 @@
         background-color: var(--secondary-color);
         margin: 2% 0;
       }
-      .card {
+      .card-container {
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards horizontally */
+        width: 80%; /* Set the container width to 80% of the screen */
+        margin: 0 auto; /* Center the container */
+        min-width: 10vw;
+    }
+
+    /* Define the card style */
+    .card {
+        white-space: inherit;
+        overflow: hidden;
+        display: flex;
         background-color: var(--secondary-color);
-        border-radius: 5px;
-        width: 100%;
-        aspect-ratio: 4/3;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 5%;
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-        width: calc(50% - 4%);
-        float: left;
-      }
-      .card:hover {
+        align-items: center; /* Align the icon and the text vertically */
+        width: 100%; /* Set the card width to 100% of the container */
+        height: 10%; /* Set the card height to 10% of the container */
+        border-radius: 10px;
+        vertical-align: center;
+        margin: 10px; /* Add some margin between cards */
+    }
+    .card:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         transform: translateY(-5px);
       }
-      .card a {
+    .card {
+        white-space: nowrap;
+        display: flex;
+        vertical-align: middle;
         color: var(--primary-color);
         text-decoration: none;
-      }
-      .card img {
-        margin: 10%;
-        height: 80%;
-        width: 80%;
-      }
-      .card-title {
-        font-size: larger;
-        font-weight: bold;
-        margin-bottom: 1%;
-        color: black
-      }
-      .card-divider {
-        height: 2px;
-        background-color: var(--secondary-color);
-        margin-bottom: 1%;
-      }
-      .card-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        align-items: center;
-        justify-items: center;
-      }
+    }
+
+    /* Define the icon style */
+    .card img {
+        width: 20%; /* Set the icon width to 20% of the card */
+        height: 80%; /* Set the icon height to 80% of the card */
+        margin: 10px; /* Add some margin around the icon */
+    }
+
+
       @media (max-width: 600px) {
         .container {
           padding: 1%;
@@ -195,67 +178,28 @@
                 <h1 style="padding: 5%;">Gu </h1>
             </span>
         </div>
-        <h2>Music production :</h2>
+        <div class="wave-divider">
+            <div class="wave"></div>
+          </div>
+        <br>
         <div class="card-container">
-          <div class="card">
-              <div class="card-title">Fiverr</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Twitter profile URL here]">
-                <img src="fiverr-1.svg">
-              </a>
+            <!-- First card -->
+            <div class="card">
+              <!-- SVG square icon -->
+              <img src="fiverr-1.svg" alt=""><a>ciao ciao ciao ciao ciao </a>
             </div>
             <div class="card">
-              <div class="card-title">Youtube</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Instagram profile URL here]">
-                <img src="youtube.svg" alt="youtube">
-              </a>
-            </div>
-            <div class="card">
-              <div class="card-title">Soundcloud</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Twitter profile URL here]">
-                  <img src="Antu_soundcloud.svg">
-              </a>
-            </div>
-            <div class="card">
-              <div class="card-title">Musescore</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Twitter profile URL here]">
-                  <img src="musescore.svg">
-              </a>
-            </div>
-        </div>
-        <h2>Computer Science :</h2>
-        <div class="card-container">
-          <div class="card">
-              <div class="card-title">Twitter</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Twitter profile URL here]">
-                <i class="fab fa-twitter"></i> Follow me
-              </a>
-            </div>
-            <div class="card">
-              <div class="card-title">Instagram</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Instagram profile URL here]">
-                <i class="fab fa-instagram"></i> Follow me
-              </a>
-            </div>
-            <div class="card">
-              <div class="card-title">Twitter</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Twitter profile URL here]">
-                <i class="fab fa-twitter"></i> Follow me
-              </a>
-            </div>
-            <div class="card">
-              <div class="card-title">Twitter</div>
-              <div class="card-divider"></div>
-              <a href="[Insert your Twitter profile URL here]">
-                <i class="fab fa-twitter"></i> Follow me
-              </a>
-            </div>
+                <!-- SVG square icon -->
+                <img src="youtube.svg" alt="">
+              </div>
+              <div class="card">
+                <!-- SVG square icon -->
+                <img src="musescore.svg" alt="">
+              </div>
+              <div class="card">
+                <!-- SVG square icon -->
+                <img src="Antu_soundcloud.svg" alt="">
+              </div>
         </div>
   
 
@@ -274,10 +218,7 @@
         <div class="wave"></div>
       </div>
 
-      
-      <!-- Add more cards with links to your social profiles here -->
-      <div class="section-divider"></div>
-
+      <br>
       <div class="bouncing-balls">
         <div class="ball"></div>
         <div class="ball"></div>
