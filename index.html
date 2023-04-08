@@ -16,21 +16,28 @@
         body {
             font-size: large;
             font-family: 'Indie Flower', regular;
-            background-color: var(--primary-color);
             color: var(--secondary-color);
             margin: 0;
             padding: 0;
         }
 
         .title {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
+        .bio{
+            color: var(--primary-color);
+        }
         .container {
-            max-width: 90%;
-            margin: 0 auto;
+            background-image: url('backgrounds/sky.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+            margin: 10 auto;
             min-width: 10%;
         }
 
@@ -41,6 +48,7 @@
         }
 
         .card-container {
+            
             white-space: nowrap;
             overflow: hidden;
             display: flex;
@@ -198,10 +206,11 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="title">
             <span>
-                <h1 style="padding: 5%;">Gu </h1>
+                <h1 >Gu</h1>
             </span>
         </div>
         <div class="wave-divider">
@@ -232,14 +241,16 @@
         <div class="wave-divider">
             <div class="wave"></div>
         </div>
-        <h2 style=" line-height:  150%; padding: 5%;"> Bio </h2>
-        <p style=" line-height:  150%; padding: 5%;">
-            Hello! I'm Guglielmo, a computer science student who is passionate about music technologies.
-            <br>
-            <br> I enjoy creating music for various media, such as video games, animation, vlogs, and movies.
-
-        </p>
-
+        <div class="bio">
+            <h2 style=" line-height:  150%; padding: 5%;"> Bio </h2>
+            <p style=" line-height:  150%; padding: 5%;">
+                Hello! I'm Guglielmo, a computer science student who is passionate about music technologies.
+                <br>
+                <br> I enjoy creating music for various media, such as video games, animation, vlogs, and movies.
+            </p>
+    
+        </div>
+        
         <div class="wave-divider">
             <div class="wave"></div>
         </div>
