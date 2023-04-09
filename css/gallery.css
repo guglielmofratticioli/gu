@@ -1,0 +1,53 @@
+.scroll-gallery {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    overflow-y: visible;
+  }
+  .scroll-gallery::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .gallery {
+    position: relative;
+    height: 100%;
+    background-color: azure;
+    overflow-y: visible;
+  }
+  .gallery::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .element {
+    position: absolute;
+  }
+  
+  /* Set aspect ratio for elements with different aspect ratios */
+  .element.one-one {
+    aspect-ratio: 1 / 1;
+    background-color: red;
+  }
+  
+  .element.four-third {
+    aspect-ratio: 4 / 3;
+    background-color: blue;
+  }
+  
+  .element.horizontal {
+    aspect-ratio: 4 / 1;
+    background-color: yellow;
+  }
+  
+  /* Set size for elements with different degrees of relevance */
+  .element.high {
+    width: 60%;
+  }
+  
+  .element.medium {
+    width: 50%;
+  }
+  
+  .element.low {
+    width: 40%;
+  }
