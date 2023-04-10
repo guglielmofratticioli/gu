@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: white;
+    background-color: black;
     overflow-y: visible;
   }
   .scroll-gallery::-webkit-scrollbar{
@@ -12,7 +12,7 @@
   .gallery {
     position: relative;
     height: 100%;
-    background-color: azure;
+    background-color: black;
     overflow-y: visible;
   }
   .gallery::-webkit-scrollbar{
@@ -45,9 +45,9 @@
   }
   
   .element.medium {
-    width: 50%;
+    width: 40%;
   }
   
   .element.low {
-    width: 40%;
+    width: 25%;
   }

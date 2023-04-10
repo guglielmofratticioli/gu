@@ -32,6 +32,7 @@
   
   .social-display:active {
     transform: scale(0.9);
+    box-shadow: 10px #333;
   }
   
   .overlay-link {
@@ -80,10 +81,13 @@
       align-items:center;
       height:80%;
       aspect-ratio:1/1;
-      background-color:yellow;
+      background-color:transparent;
+  }
+  .social img {
+    flex: 1;
   }
   
-  .social.selected {
+  .selected {
       transform:scale(1.1);
-      box-shadow:rgba(0,0,0,0.3);
+      box-shadow: 0px 5px 10px;
   }
