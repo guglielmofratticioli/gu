@@ -34,8 +34,8 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    height:10%;
-    background: lightblue;
+    height:5%;
+    background: #f0e4d1;
   }
   
   .tab-content {
