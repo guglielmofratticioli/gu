@@ -59,7 +59,6 @@
 }
 
 .fa-link.clicked {
-  color: red;
 
 }
 
@@ -83,8 +82,8 @@
   background-color: darkslategray;
 }
 
-.social a {
-  font-size: 5vh;
+.social div {
+  font-size: 3.5vh;
   border: none;
 }
 

@@ -54,5 +54,11 @@ overlay.addEventListener('touchstart', () => {
 overlay.addEventListener('mousedown', () => {
   // Toggle clicked class on link symbol icon element
   linkIcon.classList.toggle('clicked');
-  overlay.style.border = 'red 2px solid';
+  overlayLink.style='height:90%; background:rgba(0,0,0,0.1);';
+});
+
+overlay.addEventListener('mouseup', () => {
+  // Toggle clicked class on link symbol icon element
+  linkIcon.classList.toggle('clicked');
+  overlayLink.style='height:100%';
 });
