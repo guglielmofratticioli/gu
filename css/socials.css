@@ -1,93 +1,172 @@
 .socials-container {
-    width: 100%;
-    height: 100%;
-    background-color: lightgray;
-  }
-  
-  .social-carousel {
-    width: 100%;
-    height: 100%;
-    background-color: darkgray;
-  }
-  
-  .social-view {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: gray;
-  }
-  
-  .social-display {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+}
 
-    height: 80%;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.social-carousel {
+  width: 100%;
+  height: 100%;
+  background-color: darkgray;
+}
 
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .social-display:active {
-    transform: scale(0.9);
-    box-shadow: 10px #333;
-  }
-  
-  .overlay-link {
-    height: 90%;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    border: 2px solid #333;
-    border-radius: 10px;
-    align-items:center;
-      font-size:3em;
-      opacity:0.2;
-      background-color:white;
-  
-  }
-  
-  .fa-link.clicked {
-      color:red;
-  
-  }
-  
-  .socials-row {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      width:100%;
-      height:15%;
-      background-color:dimgray;
-  
-  }
-  
-  .grid {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      align-items:center;
-      width:100%;
-      height:100%;
-      background-color:darkslategray;
-  }
-  
-  .social {
-      font-size:0;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:80%;
-      aspect-ratio:1/1;
-      background-color:transparent;
-  }
-  .social img {
-    flex: 1;
-  }
-  
-  .selected {
-      transform:scale(1.1);
-      box-shadow: 0px 5px 10px;
-  }
+.social-view {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: gray;
+}
+
+.social-display {
+  position: relative;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.social-display img {
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: transparent;
+  z-index: 0;
+  border-radius: .5em;
+} 
+
+.social-display:active {
+  transform: scale(0.9);
+  box-shadow: 10px #333;
+}
+
+.overlay-link {
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  border: 2px solid green;
+  color: green;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 3em;
+  opacity: 0.8;
+}
+
+.fa-link.clicked {
+  color: red;
+
+}
+
+.socials-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 14%;
+  background-color: dimgray;
+
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: darkslategray;
+}
+
+.social a {
+  font-size: 5vh;
+  border: none;
+}
+
+.social {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+}
+
+.fa img {
+  width: 70%;
+}
+
+.selected {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 10px;
+}
+
+.fa {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-link.clicked {
+  border: none;
+}
+
+#Fiverr {
+  background: #00b22d;
+  color: white;
+}
+
+#None {
+  aspect-ratio: 1/1;
+  background: #FF0000;
+  color: white;
+}
+
+.fa-youtube-play,
+#Youtube {
+  aspect-ratio: 1/1;
+  background: #FF0000;
+  color: white;
+}
+
+.fa-instagram,
+#Instagram {
+  aspect-ratio: 1/1;
+  background: #FFC0CB;
+  color: white;
+}
+
+
+.fa-soundcloud,
+#Soundcloud {
+  display: flex;
+  background: #F26F23;
+  color: white;
+}
+
+.fa-telegram,
+#Telegram {
+  aspect-ratio: 1/1;
+  background: #0088CC;
+  color: white;
+}
+
+.fa-whatsapp,
+#Whatsapp {
+  aspect-ratio: 1/1;
+  background: #25D366;
+  color: white;
+}
+
+.fa-github,
+#Github {
+  aspect-ratio: 1/1;
+  background: #6e5494;
+  color: white;
+}
