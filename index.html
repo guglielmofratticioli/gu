@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/socials.css">
   <!-- use another link icon??  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/packery/2.1.2/packery.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -18,15 +19,15 @@
           <div class="tab-pane">
             <div class="nested-tab-container">
               <div class="nested-tab-content">
-                <div class="nested-tab-pane">
-
+                <div class="nested-tab-pane" id="social-pane">
+                  <img src="backgrounds/back.png" style="top:-10%;left:50%;  transform: translateX(-50%);;position:absolute; z-index: 0;">
                   <!-- SOCIALS   -->
                   <div class="socials-container">
                     <div class="social-carousel">
                       <div class="social-view">
                         <div class="social-display">
-                          <img src="png/Fiverr.png" alt="">
-                          <a class="overlay-link">
+                          <img src="png/Fiverr.png" alt="" style="display: none;">
+                          <a class="overlay-link" style="border: .1em solid black;color: black;opacity: 20%;">
                             <!-- Add link symbol icon -->
                             <i class="fa fa-link"></i>
                           </a>
@@ -34,7 +35,7 @@
                       </div>
                       <div class="socials-row">
                         <div class="grid">
-                          <div id="Fiverr" class="social selected">
+                          <div id="Fiverr" class="social">
                             <div class="Fiverr">
                               <div href="#" class="fa">
                                <img src="svg/fiverr-1.svg">
@@ -79,6 +80,7 @@
                         </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
@@ -87,7 +89,6 @@
             </div>
           </div>
           <div class="tab-pane">
-
             <div class="nested-tab-container">
               <div class="nested-tab-content">
                 <div id="tab2">

@@ -13,6 +13,8 @@ socials.forEach((social, index) => {
     socials.forEach(social => social.classList.remove('selected'));
     // Add selected class to clicked social element
     social.classList.add('selected');
+    socialDisplay.style = 'height:90%;opacity:95%'
+    socialDisplayImg.style = 'display:block';
     // Update social display with number of selected social element
     if(social.id =="Fiverr") {
       overlayLink.style.borderColor = 'green'
@@ -39,6 +41,9 @@ socials.forEach((social, index) => {
       overlayLink.style.color = 'purple' }
 
   });
+  social.addEventListener('dblclick', ()=>{
+    socialDisplay.style = 'height:30%; opacity:40%'
+  })
 });
 
 // Get link symbol icon element
@@ -48,13 +53,15 @@ const linkIcon = document.querySelector('.fa-link');
 // Add click event listener to link symbol icon element
 overlay.addEventListener('touchstart', () => {
   // Toggle clicked class on link symbol icon element
-  linkIcon.classList.toggle('clicked');
+  overlayLink.style='height:90%; background:rgba(0,0,0,0.1);';
+  socialDisplay.style='height:90%; opacity:90%'
 });
 
 overlay.addEventListener('mousedown', () => {
   // Toggle clicked class on link symbol icon element
   linkIcon.classList.toggle('clicked');
   overlayLink.style='height:90%; background:rgba(0,0,0,0.1);';
+  socialDisplay.style='height:90%; opacity:90%'
 });
 
 overlay.addEventListener('mouseup', () => {

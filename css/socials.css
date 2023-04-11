@@ -1,13 +1,15 @@
 .socials-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: lightgray;
 }
-
+#social-pane {
+  background: #f1e0cf;
+}
 .social-carousel {
   width: 100%;
   height: 100%;
-  background-color: darkgray;
 }
 
 .social-view {
@@ -16,12 +18,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: gray;
+  background:transparent;
 }
 
 .social-display {
   position: relative;
-  height: 80%;
+  height: 30%;
   aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
@@ -59,7 +61,7 @@
 }
 
 .fa-link.clicked {
-
+  opacity: 60%;
 }
 
 .socials-row {
@@ -68,7 +70,7 @@
   align-items: center;
   width: 100%;
   height: 14%;
-  background-color: dimgray;
+  background-color: #f1e0cf;
 
 }
 
@@ -79,7 +81,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: darkslategray;
 }
 
 .social div {
@@ -88,7 +89,14 @@
 }
 
 .social {
-  height: 90%;
+  opacity: 100%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  background-color: #f1e0cf;
+  border-radius: 1em;
+  border: solid black .1em;
+  box-shadow: 0 .1em 1em #adbfa4;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +110,6 @@
 
 .selected {
   transform: scale(1.1);
-  box-shadow: 0px 5px 10px;
 }
 
 .fa {
