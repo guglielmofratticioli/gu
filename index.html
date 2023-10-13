@@ -1,134 +1,241 @@
-<!DOCTYPE html>
-
 <head>
-  <link rel="stylesheet" href="css/scrollable.css">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/gallery.css">
-  <link rel="stylesheet" href="css/socials.css">
-  <!-- use another link icon??  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/packery/2.1.2/packery.pkgd.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/audio.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <link rel="stylesheet" href="./css/HelloTab.css">
+    <link rel="stylesheet" href="./css/biography.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <script src="./js/audio.js"></script>  
+    <script src="./js/form.js"></script> 
+    <script src="./js/main.js"></script> 
+    <script src="./js/video.js"></script> 
+
+    <script src="./js/wavesurfer.js"></script>
+
 </head>
 
+
 <body>
-  <div class="app">
-    <div class="scroll-tabs">
-      <div class="scroll-nav"> Content for Nested Tab 1 </div>
-      <div class="tab-container">
-        <div class="tab-content">
-          <div class="tab-pane">
-            <div class="nested-tab-container">
-              <div class="nested-tab-content">
-                <div class="nested-tab-pane" id="social-pane">
-                  <img src="backgrounds/back.png" style="top:-10%;left:50%; height: 100%;  transform: translateX(-50%);;position:absolute; z-index: 0;">
-                  <!-- SOCIALS   -->
-                  <div class="socials-container">
-                    <div class="social-carousel">
-                      <div class="social-view">
-                        <div class="social-display">
-                          <img src="png/Fiverr.png" alt="" style="display: none;">
-                          <a class="overlay-link" style="border: .1em solid black;color: black;opacity: 20%;">
-                            <!-- Add link symbol icon -->
-                            <i class="fa fa-link"></i>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="socials-row">
-                        <div class="grid">
-                          <div id="Fiverr" class="social">
-                            <div class="Fiverr">
-                              <div href="#" class="fa">
-                               <img src="svg/fiverr-1.svg">
-                              </div>
-                            </div>
-                          </div>
-                          <div id="Youtube" class="social">
-                            <div class="Youtube">
-                              <div href="#" class="fa fa-youtube-play"></div>
-                            </div>
-                          </div>
-                          <div id="Soundcloud" class="social">
-                            <div class="Soundcloud">
-                              <div href="#" class="fa fa-soundcloud"></div>
-                            </div>
-                          </div>
-                          <div id="Instagram" class="social">
-                            <div class="Instagram">
-                              <div href="#" class="fa fa-instagram"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="socials-row">
-                        <div class="grid">
-                          <div id="Telegram" class="social">
-                            <div class="Telegram">
-                              <div href="#" class="fa fa-telegram"></div>
-                            </div>
-                          </div>
-                          <div id="Whatsapp" class="social">
-                            <div class="Whatsapp">
-                              <div href="#" class="fa fa-whatsapp"></div>
-                            </div>
-                          </div>
-                          <div id="Github" class="social">
-                            <div class="Github">
-                              <div href="#" class="fa fa-github"></div>
-                            </div>
-                          </div>
-                          <div id="None" class="social"></div>
-                        </div>
-                      </div>
-                    </div>
+    <audio id="Fight_For_Herrand" class="audio" src="audio/Fight_For_Herrand.mp3"></audio>
+    <audio id="Frozen_Lake" class="audio" src="audio/Frozen_Lake.mp3"></audio>
+    <audio id="Lab_Outbreak" class="audio" src="audio/Lab_Outbreak.mp3"></audio>
+    <audio id="BigBand_Stuff" class="audio" src="audio/BigBand_Stuff.mp3"></audio>
+    <audio id="Cup_Titles" class="audio" src="audio/Cup_Titles.mp3"></audio>
+    <audio id="Cup_Caravan!" class="audio" src="audio/Cup_Caravan!.mp3"></audio>
+    <audio id="Pirgrims" class="audio" src="audio/Pirgrims.mp3"></audio>
+    <audio id="Intro_Arp" class="audio" src="audio/Intro-Arp.mp3"></audio>
 
-                  </div>
-                </div>
+<!-- CONTAINER -->
+<div class="main_container">
 
-                <div class="nested-footer-pane">Content for Nested Tab 2</div>
-              </div>
+    <div class="hello_tab">
+        <div id="hero">
+            <h1 class="hero-title load-hidden" style="visibility: visible;"> Hello There, I'm  <span class="text-color-main">Gu ♩</span> <br> 
+                and I make music  </h1> 
+            <div id="artwork">
+                
             </div>
-          </div>
-          <div class="tab-pane">
-            <div class="nested-tab-container">
-              <div class="nested-tab-content">
-                <div id="tab2">
-                  <!-- GALLERY  -->
-                  <div class="scroll-gallery">
-                    <div class="gallery">
-                      <div class="element one-one low"></div>
-                      <div class="element horizontal medium"></div>
-                      <div class="element horizontal high"></div>
-                      <div class="element sixteen-nine high"></div>
-                      <div class="element sixteen-nine high"></div>
-                      <div class="element horizontal low"></div>
-                      <div class="element one-one medium"></div>
-                      <div class="element four-third high"></div>
-                      <div class="element rectangle medium"></div>
-                      <div class="element four-third medium"></div>
-                      <div class="element one-one low"></div>
-                    </div>
-                  </div>
+            <div class="player">
+            <div id="play">
+                <svg fill="silver" height="100%" width="100%"viewBox="0 0 512 512" xml:space="preserve">
+        <path d="M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M344.48,269.57l-128,80
+	c-2.59,1.617-5.535,2.43-8.48,2.43c-2.668,0-5.34-0.664-7.758-2.008C195.156,347.172,192,341.82,192,336V176
+	c0-5.82,3.156-11.172,8.242-13.992c5.086-2.836,11.305-2.664,16.238,0.422l128,80c4.676,2.93,7.52,8.055,7.52,13.57
+	S349.156,266.641,344.48,269.57z"/> 
+                </svg>
+            </div>
 
-                </div>
-                <div id="foot2">Content for Nested Tab 4</div>
-              </div>
+
+            <div id="pause">
+                <svg fill="silver" height="100%" width="100%" viewBox="0 0 512 512" xml:space="preserve">
+<path d="M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M224,320
+	c0,8.836-7.164,16-16,16h-32c-8.836,0-16-7.164-16-16V192c0-8.836,7.164-16,16-16h32c8.836,0,16,7.164,16,16V320z M352,320
+	c0,8.836-7.164,16-16,16h-32c-8.836,0-16-7.164-16-16V192c0-8.836,7.164-16,16-16h32c8.836,0,16,7.164,16,16V320z"/>
+</svg>
             </div>
-          </div>
-          <div class="tab-pane">
-            <!-- BIO   -->
-            <div class="nested-tab-container">
-              <div class="nested-tab-content">
-                <div class="nested-tab-pane">Content for Nested Tab 5</div>
-                <div class="nested-footer-pane">Content for Nested Tab 6</div>
-              </div>
+            <div id="dice">
+                <svg fill="silver" width="100%" height="100%" viewBox="0 -64 640 640"><path d="M592 192H473.26c12.69 29.59 7.12 65.2-17 89.32L320 417.58V464c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48V240c0-26.51-21.49-48-48-48zM480 376c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm-46.37-186.7L258.7 14.37c-19.16-19.16-50.23-19.16-69.39 0L14.37 189.3c-19.16 19.16-19.16 50.23 0 69.39L189.3 433.63c19.16 19.16 50.23 19.16 69.39 0L433.63 258.7c19.16-19.17 19.16-50.24 0-69.4zM96 248c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm128 128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm0-128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm0-128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm128 128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z"/>
+                </svg>
             </div>
-          </div>
+            
+            <div class="waveform_canvas">
+                <div id="timeline"></div>
+                <canvas id="waveform"></canvas>
+            </div>
+            <div id="audio_label">
+
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <script src="js/scrollable.js"></script>
-  <script src="js/socials.js"></script>
-  <script src="js/gallery.js"></script>
+
+        <div class="show_projects" onclick="document.querySelector('.video_playlist').scrollIntoView({ block: 'start',  behavior: 'smooth' })">
+            <div class="gold_arrow">
+                <svg fill="silver" height="100%" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 330 330" xml:space="preserve">
+           <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+               c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+               s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+           </svg>
+            </div>
+        </div>
+    </div> 
+       
+    </div>
+
+    <div class="Projects_title">
+        My music in Action
+    </div>
+
+    <div class ="video_playlist">
+        <button class="cd-nav-trigger">Menu<span aria-hidden="true" class="cd-icon"></span></button>
+        <div class="project">
+            <div class="project_text">
+                Here is a gallery of projects featuring <b>my music</b>. 
+                <br>
+                I created the music compositions using my expertise in <b>Functional</b> and <b>Emotive</b>  Harmony. 
+                <br>
+                I also sampled and recorded original <b>sound effects</b>, and I produced the final product using <b>high-quality</b> software and libraries.
+                <br>
+            </div>
+
+            <div class="cd-projects-container">
+                <ul>
+                    <li class="single-project" style="background: url(img/DyingLight.png); background-size: contain;">
+                        <div class="cd-title">
+                            <h2>Dying Light</h2>
+                            
+                        </div> 
+
+                        <div class="cd-project-info">
+                            <iframe src="https://www.youtube.com/embed/OuMxb7pjxUA?si=Dw5T0pHbIBmBFPR5&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <button class="cd-scroll">Scroll down</button>
+                            
+                            <div class="content-wrapper">
+                                <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1704364800&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1694449395&color=%2330241c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                            </div>
+                        </div> 
+                    </li>
+
+                    <li class="single-project" style="background: url(img/Cuphead.png); background-size: contain;">
+                        <div class="cd-title">
+                            <h2>Cuphead</h2>
+                        </div> 
+        
+                        <div class="cd-project-info">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WUCOnOTr2Rg?si=Ghm-lPMtYoet8mnc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <button class="cd-scroll">Scroll down</button>
+        
+                            <div class="content-wrapper">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1638934389&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1638939714&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>                       
+                             </div>
+                        </div> 
+                    </li>
+
+                    <li class="single-project" style="background: url(img/WeFaceForward.png); background-size: contain;">
+                        <div class="cd-title">
+                            <h2>Documentary</h2>
+                        </div>
+            
+                        <div class="cd-project-info">
+                            <iframe  src="https://www.youtube.com/embed/RX898jDUKWU?si=4nP9yr0RJO8NbV_D&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <button class="cd-scroll">Scroll down</button>
+                            
+                            <div class="content-wrapper">
+            
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1552304722&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                           </div>
+                        </div> 
+                    </li>
+        
+                    <li class="single-project" style="background: url(img/OdisseyCover.jpeg); background-size: contain;">
+                        <div class="cd-title">
+                            <h2>Super Mario Odissey</h2>
+                        </div>
+        
+                        <div class="cd-project-info">
+                            <iframe src="https://www.youtube.com/embed/oZO07mobP24?si=faTRWrlzMGYl-FMn&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <button class="cd-scroll">Scroll down</button>
+                            
+                            <div class="content-wrapper">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1524987397&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                            </div>
+                        </div> 
+                    </li>
+
+                    <li class="single-project" style="background: url(img/Jeeg.jpg); background-size: contain;">
+                        <div class="cd-title">
+                            <h2>Jeeg Robot</h2>
+                        </div>
+        
+                        <div class="cd-project-info">
+                            <iframe  src="https://www.youtube.com/embed/rmGFBbSVxgg?si=ZTehyWDZdMF6WInL&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                            
+                            
+                            <div class="content-wrapper">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1552970824&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                            </div>
+                        </div> 
+                    </li>
+                           
+                    <li class="single-project" style="background: url(img/Paulettes.jpg); background-size: contain;">
+                        <div class="cd-title">
+                            <h2>Paulette's Chair</h2>
+                        </div>
+        
+                        <div class="cd-project-info">
+                            <iframe  src="https://www.youtube.com/embed/G73WSlMcDJU?si=Xd4mn30dJu-dTgYL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                            <button class="cd-scroll">Scroll down</button>
+                            
+                            <div class="content-wrapper">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1524986287&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>    
+                            </div>
+                        </div> 
+                    </li>
+
+
+                    <li class="single-project" style="background: black; background-size: contain; color: white;font-size: 3em; display: flex; justify-content: center; align-items: center;">
+
+                        ♩  ♩  ♩
+
+                        <div class="cd-project-info">
+                            
+                            <div class="content-wrapper">
+                            </div>
+                        </div> 
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="v-space"></div>
+</div>
+
+<div class="footer">
+    <div class="social-icons">
+      <a href="#"><i src="img/facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><i src="img/twitter-icon.png" alt="Twitter"></a>
+      <a href="#"><i src="img/instagram-icon.png" alt="Instagram"></a>
+    </div>
+
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
+

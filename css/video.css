@@ -1,0 +1,74 @@
+.video_playlist{
+    position: relative;
+    overflow-y: scroll;
+    width: 65%;
+
+    box-shadow: 0 2em 10em rgba(218, 165, 32,0.5);
+}
+
+.project{
+    position: relative;
+    height: 30%;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: black;
+    color: silver;
+}
+
+.projects_title{
+    position: relative;
+    top: 10vh;
+    color: white;
+    font-size: 5.6rem;
+    font-weight: 700;
+}
+
+.project_text{
+    position: absolute;
+    font-size: 1.4em;
+    margin: 3em;
+    line-height: 1.5em;
+}
+.project_text b {
+    color: white;
+}
+@media (orientation: landscape) {
+.cd-project-info iframe{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-wrapper{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.content-wrapper iframe{
+    position: relative;
+    flex: 1;
+}
+}
+
+@media (orientation: portrait) {
+    .cd-project-info iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .content-wrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-wrapper iframe{
+        position: relative;
+        flex: 1;
+    }
+    }

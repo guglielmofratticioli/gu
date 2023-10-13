@@ -1,0 +1,49 @@
+body {
+    height: 210%;
+    width: 100%;
+    scroll-behavior: smooth;
+    background-color : black;
+    color: black;
+}
+.main_container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+div{
+    font-family: 'Avenir','SanSerif';
+}
+
+.footer-container{
+    display: grid;
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.hello_tab{
+    flex: 0.8;
+}
+.player{
+    flex: 0.2;
+}
+.projects_title{
+    flex: 0.2;
+}
+.video_playlist{
+    flex: 0.4;
+}
+.v-space{
+    height: 10vh;
+    width:100vw;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+  }
+body::-webkit-scrollbar {
+    display: none;
+  }

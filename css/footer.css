@@ -1,0 +1,22 @@
+
+
+  .footer {
+    text-align: center;
+    background: black;
+    padding: 1%;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons img {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+  }
+  
+  .social-icons a:hover img {
+    filter: grayscale(0%); /* Add hover effect if you have grayscale icons */
+  }
+  
