@@ -1,14 +1,15 @@
 .video_playlist{
     position: relative;
     overflow-y: scroll;
-    width: 65%;
+    width: 65vw;
+    height: 50vh;
 
     box-shadow: 0 2em 10em rgba(218, 165, 32,0.5);
 }
 
 .project{
     position: relative;
-    height: 30%;
+    height: 100%;
     width: 100%;
     flex: 0 0 auto;
     background-color: black;
@@ -16,11 +17,14 @@
 }
 
 .projects_title{
+    display: flex;
+    text-align: center;
     position: relative;
     top: 10vh;
     color: white;
-    font-size: 5.6rem;
+    font-size: 5.4rem;
     font-weight: 700;
+
 }
 
 .project_text{

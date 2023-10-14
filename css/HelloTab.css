@@ -57,7 +57,7 @@
 
 .player{
     position: absolute;
-    width: 50em;
+    width: 45vw;
     height: 15%;
     bottom:20%;
     left: 5vw;
@@ -118,7 +118,7 @@
     height: 100%;
     width: 100%;
     opacity: 80%;
-    border-radius: 10vh;
+
 }
 
 #audio_label{
@@ -135,12 +135,15 @@
     background-size: cover;
     position: absolute;
     z-index: 0;
-    right: 5vw;
-    height: 60vh;
-    width: 30vw;
+    right: 0;
+    height: 100%;
+    width: 60%;
 }
 
 .show_projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100vw;
     height: 8vh;
@@ -150,6 +153,9 @@
 
 .gold_arrow{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20vw;
     left: 40vw;
     animation: bounce2 2s ease infinite;

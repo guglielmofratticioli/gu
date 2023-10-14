@@ -177,29 +177,25 @@ button {
 }
 
 /* -------------------------------- 
-
- Navigation
-
--------------------------------- */
 .cd-primary-nav {
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  /* height = (100% - 9%) - 9% is the space taken by the projects when the navigation is open */
-  height: 91%;
-  width: 100%;
+
+  height: 91vh;
+  width: 100vw;
   overflow: auto;
   text-align: center;
   opacity: 0;
   -webkit-transition: opacity 0s 0.4s;
   -moz-transition: opacity 0s 0.4s;
   transition: opacity 0s 0.4s;
-  /* vertically align its content */
+
   display: table;
 }
 .cd-primary-nav ul {
-  /* vertically align inside nav */
+
   display: table-cell;
   vertical-align: middle;
   -webkit-transform: translateY(50px);
@@ -237,7 +233,7 @@ button {
   letter-spacing: 1px;
 }
 .cd-primary-nav .cd-label::after {
-  /* line below .cd-label*/
+
   content: '';
   position: absolute;
   left: 50%;
@@ -269,18 +265,12 @@ button {
   .cd-primary-nav a {
     font-size: 4rem;
   }
-}
+} */
 
-/* -------------------------------- 
-
- Projects
-
--------------------------------- */
 .cd-projects-container {
   height: 100%;
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  position: absolute;
   overflow-y: scroll;
 }
 .cd-projects-container .single-project {
