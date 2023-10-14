@@ -16,25 +16,35 @@ window.addEventListener('DOMContentLoaded', () => {
 // Set up audio context
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
-const drawAudio = async (url) => {
+const drawAudio = (url) => {
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+    // Create an <audio> element
+    const audioElement = new Audio(url);
 
-    const arrayBuffer = await response.arrayBuffer();
-    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+    // Once the audio is loaded, draw the waveform
+    audioElement.addEventListener('loadedmetadata', () => {
+      // Ensure the audio has loaded before drawing (e.g., get duration if needed)
+      audioElement.currentTime = 0;
+      const duration = audioElement.duration;
+      
+      audioElement.addEventListener('canplay', () => {
+        // You can access audioElement.currentTime, audioElement.duration, and draw the waveform
+        const normalizedData = normalizeData(filterData(audioElement));
+        draw(normalizedData);
+      });
 
-    // Once the audio data is decoded, draw the waveform
-    audioBuffer.addEventListener('complete', () => {
-      const normalizedData = normalizeData(filterData(audioBuffer));
-      draw(normalizedData);
+      // Optional: Set up event listeners for audio control (play, pause, etc.)
+      // ...
+
+      // Load the audio (you may need to do this explicitly, but often it starts loading automatically)
+      audioElement.load();
     });
+
   } catch (error) {
     console.error("Error loading audio:", error);
   }
 };
+
 
 /**
  * Filters the AudioBuffer retrieved from an external source
