@@ -17,13 +17,13 @@ window.addEventListener('DOMContentLoaded', () => {
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 
-/**
- * Retrieves audio from an external source, the initializes the drawing function
- * @param {String} url the url of the audio we'd like to fetch
- */
 const drawAudio = async (url) => {
   try {
     const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
     const normalizedData = normalizeData(filterData(audioBuffer));
