@@ -21,11 +21,16 @@ const audioContext = new AudioContext();
  * Retrieves audio from an external source, the initializes the drawing function
  * @param {String} url the url of the audio we'd like to fetch
  */
-const drawAudio = url => {
-  fetch(url)
-    .then(response => response.arrayBuffer())
-    .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
-    .then(audioBuffer => draw(normalizeData(filterData(audioBuffer))));
+const drawAudio = async (url) => {
+  try {
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+    const normalizedData = normalizeData(filterData(audioBuffer));
+    draw(normalizedData);
+  } catch (error) {
+    console.error("Error loading audio:", error);
+  }
 };
 
 /**
