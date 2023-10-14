@@ -128,7 +128,7 @@ let pauseButton = document.getElementById("pause");
 let fileName = audioElement.id;
 
 drawAudio('audio/'+fileName+'.mp3');
-
+//!!
 
 const audiolabel = document.getElementById('audio_label');
 audiolabel.innerHTML= 'Now\ Playing:\ '+audioElement.id;
@@ -166,7 +166,7 @@ document.querySelector('#dice').addEventListener('click', () => {
     audioElement = audioList[Math.floor(Math.random() * audioList.length)];
     let fileName = audioElement.id;
     drawAudio('audio/'+fileName+'.mp3');
-
+    //!!
     const audiolabel = document.getElementById('audio_label');
     audiolabel.innerHTML= 'Now\ Playing:\ '+audioElement.id;
 });
