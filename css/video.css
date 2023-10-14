@@ -25,15 +25,15 @@
         display: flex;
         text-align: center;
         position: relative;
-        top: 10vh;
+        top: 5vh;
         color: white;
-        font-size: 5.4rem;
+        font-size: 5rem;
         font-weight: 700;
     }
     .video_playlist{
         position: relative;
         overflow-y: scroll;
-        width: 65vw;
+        width: 75vw;
         height: 50vh;
 
         box-shadow: 0 2em 10em rgba(218, 165, 32,0.5);
