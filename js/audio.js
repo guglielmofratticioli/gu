@@ -35,7 +35,7 @@ const drawAudio = url => {
  */
 const filterData = audioBuffer => {
   const rawData = audioBuffer.getChannelData(0); // We only need to work with one channel of data
-  const samples = 90; // Number of samples we want to have in our final data set
+  const samples = 200; // Number of samples we want to have in our final data set
   const blockSize = Math.floor(rawData.length / samples); // the number of samples in each subdivision
   const filteredData = [];
   for (let i = 0; i < samples; i++) {
@@ -65,6 +65,7 @@ const normalizeData = filteredData => {
  * @returns {Array} a normalized array of data
  */
 const draw = normalizedData => {
+
   // set up the canvas
   const canvas = document.querySelector("canvas");
   const dpr = window.devicePixelRatio || 1;
@@ -82,9 +83,7 @@ const draw = normalizedData => {
     let height = normalizedData[i] * canvas.offsetHeight - padding;
     if (height < 0) {
         height = 0;
-    } else if (height > canvas.offsetHeight / 2) {
-        height = height > canvas.offsetHeight / 2;
-    }
+    } else height = height > canvas.offsetHeight / 2 ? canvas.offsetHeight / 2 : height;
     drawLineSegment(ctx, x, height, width, (i + 1) % 2);
   }
 };
@@ -99,12 +98,12 @@ const draw = normalizedData => {
  */
 const drawLineSegment = (ctx, x, height, width, isEven) => {
   ctx.lineWidth = 1; // how thick the line is
-  ctx.strokeStyle = "gold"; // what color our line is
+  ctx.strokeStyle = "#a79753"; // what color our line is
   ctx.beginPath();
   height = isEven ? height : -height;
   ctx.moveTo(x, 0);
   ctx.lineTo(x, height);
-  ctx.arc(x + width / 2, height, width / 2, Math.PI, 0, isEven);
+  ctx.arc(x + width / 2, height, width / 2, Math.PI, 0, false);
   ctx.lineTo(x + width, 0);
   ctx.stroke();
 };
@@ -148,6 +147,9 @@ document.querySelector('#pause').addEventListener('click', () => {
 document.querySelector('#dice').addEventListener('click', () => {
     playButton.style.display = "block"
     pauseButton.style.display = "none"
+    let timeline = document.getElementById("timeline")
+    timeline.style.width = '100%';
+
     audioElement.pause()
     clearTimeout(timer)
 

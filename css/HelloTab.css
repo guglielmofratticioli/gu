@@ -1,32 +1,108 @@
+@media (orientation: portrait) {
+    .hero-title{
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        font-size: 4.5rem;
+        font-weight: 700;
+        top: 32.5vh;
+        width:100%;
+        color: white;
+    } 
+    #hero {
+        min-height: 100vh;
+        height: 100vh;
+        color: white;
+        z-index: -1;
+        background: black;
+        border-bottom: 0;
+        /* align-items: center; */
+        /* margin-bottom: 0; */
+        padding: 5.6rem 0 0 ;
+        font-weight: 400;
+        display: flex;
+        inset: 0;
+    }
+    .player{
+        position: absolute;
+        width: 95vw;
+        height: 30vw;
+        bottom: 25vh;
+        left:2.5vw;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 50% 50%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    #audio_label{
+        position: absolute;
+        color: silver;
+        font-size: small;
+        font-weight: lighter;
+        transform: translateY(-10vh);   
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (orientation: landscape) {
+    .hero-title{
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+        margin-bottom: 3.2rem;
+        font-size: 5.6rem;
+        font-weight: 700;
+        color: white;
+    } 
+    #hero{
+        min-height: 100vh;
+        height: 100vh;
+        color: white;
+        z-index: -1;
+        background: black;
+        border-bottom: 0;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 0 5.6rem;
+        font-weight: 400;
+        display: flex;
+        inset: 0;
+    }
+    .player{
+        position: absolute;
+        width: 45vw;
+        height: 15%;
+        bottom:20%;
+        left: 5vw;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 50% 50%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    #audio_label{
+        position: absolute;
+        color: silver;
+        font-size: small;
+        font-weight: lighter;
+        top: 18vh;
+        left: 1vw;
+    }
+}
+
 .hello_tab{
+    position: relative;
     background-color: black;
-    width: 80%;
+    width: 100%;
 }
 
-.hero-title{
-    position: absolute;
-    z-index: 2;
-    text-align: left;
-    margin-bottom: 3.2rem;
-    font-size: 5.6rem;
-    font-weight: 700;
-    color: white;
-} 
 
-#hero{
-    min-height: 100vh;
-    height: 100vh;
-    color: white;
-    z-index: -1;
-    background: black;
-    border-bottom: 0;
-    align-items: center;
-    margin-bottom: 0;
-    padding: 0 5.6rem;
-    font-weight: 400;
-    display: flex;
-    inset: 0;
-}
+
+
 
 .cta-btn {
     z-index: 1;
@@ -55,33 +131,17 @@
     -webkit-text-fill-color: silver;           
 }
 
-.player{
-    position: absolute;
-    width: 45vw;
-    height: 15%;
-    bottom:20%;
-    left: 5vw;
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 50% 50%;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
 
 #play{
     aspect-ratio: 1/1;
-    margin: 1vw;
 }
 #pause{
     display: none;
     aspect-ratio: 1/1;
-    margin: 1vw;
 }
 
 #dice{
     aspect-ratio: 1/1;
-    margin: 1vw;
 }
 #dice:hover{
     opacity: 70%;
@@ -115,20 +175,14 @@
     position: absolute;
     background-color: black;
     right: 0;
-    height: 100%;
+    height: 83%;
+    transform: translateY(10%);
     width: 100%;
-    opacity: 80%;
+    opacity: 65%;
 
 }
 
-#audio_label{
-    position: absolute;
-    color: silver;
-    font-size: small;
-    font-weight: lighter;
-    top: 18vh;
-    left: 1vw;
-}
+
 
 #artwork{
     background: url(../img/Gu.jpg);
@@ -166,3 +220,4 @@
 	40% {transform: translateY(-30px);}
 	60% {transform: translateY(-15px);}
 }
+
