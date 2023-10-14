@@ -401,9 +401,10 @@ button {
   z-index: 1;
   height: 33.3333333333%;
   width: 100%;
-  text-align: center;
+  display: flex;
+
+  justify-content: center;
   /* vertical align its content */
-  display: table;
 }
 .cd-title::before {
   /* background image */
@@ -437,6 +438,7 @@ button {
 
 .cd-title h2 {
   position: relative;
+  top: 33.3%;
   z-index: 1;
   font-size: 2.5rem;
   font-weight: 700;
