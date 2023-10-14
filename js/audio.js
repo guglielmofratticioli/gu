@@ -122,7 +122,7 @@ clearTimeout(timer)
 let pauseButton = document.getElementById("pause");
 let fileName = audioElement.id;
 
-drawAudio('/audio/'+fileName+'.mp3');
+drawAudio('https://guglielmofratticioli.github.io/gu/audio/'+fileName+'.mp3');
 //!!
 
 const audiolabel = document.getElementById('audio_label');
@@ -160,7 +160,7 @@ document.querySelector('#dice').addEventListener('click', () => {
     const audioList = document.getElementsByTagName('audio');
     audioElement = audioList[Math.floor(Math.random() * audioList.length)];
     let fileName = audioElement.id;
-    drawAudio('/audio/'+fileName+'.mp3');
+    drawAudio('https://guglielmofratticioli.github.io/gu/audio/'+fileName+'.mp3');
     //!!
     const audiolabel = document.getElementById('audio_label');
     audiolabel.innerHTML= 'Now\ Playing:\ '+audioElement.id;
