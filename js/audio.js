@@ -16,34 +16,19 @@ window.addEventListener('DOMContentLoaded', () => {
 // Set up audio context
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
-const drawAudio = (url) => {
+
+const drawAudio = async (url) => {
   try {
-    // Create an <audio> element
-    const audioElement = new Audio(url);
-
-    // Once the audio is loaded, draw the waveform
-    audioElement.addEventListener('loadedmetadata', () => {
-      // Ensure the audio has loaded before drawing (e.g., get duration if needed)
-      audioElement.currentTime = 0;
-      const duration = audioElement.duration;
-      
-      audioElement.addEventListener('canplay', () => {
-        // You can access audioElement.currentTime, audioElement.duration, and draw the waveform
-        const normalizedData = normalizeData(filterData(audioElement));
-        draw(normalizedData);
-      });
-
-      // Optional: Set up event listeners for audio control (play, pause, etc.)
-      // ...
-
-      // Load the audio (you may need to do this explicitly, but often it starts loading automatically)
-      audioElement.load();
-    });
-
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+    const normalizedData = normalizeData(filterData(audioBuffer));
+    draw(normalizedData);
   } catch (error) {
     console.error("Error loading audio:", error);
   }
 };
+
 
 
 /**
@@ -137,7 +122,7 @@ clearTimeout(timer)
 let pauseButton = document.getElementById("pause");
 let fileName = audioElement.id;
 
-drawAudio('https://guglielmofratticioli.github.io/gu/audio/'+fileName+'.mp3');
+drawAudio('/audio/'+fileName+'.mp3');
 //!!
 
 const audiolabel = document.getElementById('audio_label');
@@ -175,7 +160,7 @@ document.querySelector('#dice').addEventListener('click', () => {
     const audioList = document.getElementsByTagName('audio');
     audioElement = audioList[Math.floor(Math.random() * audioList.length)];
     let fileName = audioElement.id;
-    drawAudio('https://guglielmofratticioli.github.io/gu/audio/'+fileName+'.mp3');
+    drawAudio('/audio/'+fileName+'.mp3');
     //!!
     const audiolabel = document.getElementById('audio_label');
     audiolabel.innerHTML= 'Now\ Playing:\ '+audioElement.id;
