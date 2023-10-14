@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
 // Set up audio context
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
-
 const drawAudio = async (url) => {
   try {
     const response = await fetch(url);
@@ -26,8 +25,12 @@ const drawAudio = async (url) => {
 
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-    const normalizedData = normalizeData(filterData(audioBuffer));
-    draw(normalizedData);
+
+    // Once the audio data is decoded, draw the waveform
+    audioBuffer.addEventListener('complete', () => {
+      const normalizedData = normalizeData(filterData(audioBuffer));
+      draw(normalizedData);
+    });
   } catch (error) {
     console.error("Error loading audio:", error);
   }
