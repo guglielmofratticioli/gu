@@ -275,6 +275,7 @@ button {
 }
 .cd-projects-container .single-project {
   position: absolute;
+  display: flex;
   z-index: 2;
   top: 0px;
   left: 0px;
@@ -359,6 +360,7 @@ button {
   -ms-transform: translateY(91%);
   -o-transform: translateY(91%);
   transform: translateY(91%);
+  display: none;
 }
 .cd-projects-container.nav-open .single-project:nth-of-type(2) {
   -webkit-transform: translateY(94%);

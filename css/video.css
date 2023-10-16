@@ -13,6 +13,9 @@
 
 .project_text{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.4em;
     margin: 3em;
     line-height: 1.5em;
