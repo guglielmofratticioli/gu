@@ -16,9 +16,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4em;
+    font-size: 1.7rem;
     margin: 3em;
     line-height: 1.5em;
+    text-align: center;
 }
 .project_text b {
     color: white;
@@ -66,7 +67,7 @@
         display: flex;
         text-align: center;
         position: relative;
-        top: 10vh;
+        top: 5vh;
         color: white;
         font-size: 4.5rem;
         font-weight: 700;
