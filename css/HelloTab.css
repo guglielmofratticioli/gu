@@ -26,9 +26,9 @@
     .player{
         text-align: center;
         position: absolute;
-        width: 95vw;
+        width: 100vw;
         height: 30vw;
-        bottom: 33vh;
+        bottom: 23vh;
         left:2.5vw;
         display: grid;
         grid-template-columns: 10% 90%;
@@ -36,6 +36,8 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 3vh;
     }
     #audio_label{
         position: absolute;
@@ -76,7 +78,7 @@
         position: absolute;
         width: 45vw;
         height: 15%;
-        bottom:33vh;
+        bottom:23vh;
         left: 5vw;
         display: grid;
         grid-template-columns: 10% 90%;
@@ -84,13 +86,15 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 3vh;
     }
     #audio_label{
         position: absolute;
         color: silver;
         font-size: small;
         font-weight: lighter;
-        top: 18vh;
+        top: -3vh;
         left: 1vw;
     }
 }
@@ -199,9 +203,10 @@
     align-items: center;
     position: absolute;
     width: 100vw;
-    height: 8vh;
-    top:92vh;
+    height: 13vh;
+    top:90vh;
     left: 0vw;
+    background-color: black;
 }
 
 .gold_arrow{
