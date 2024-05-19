@@ -156,8 +156,6 @@
 
 .waveform_canvas{
     position: relative;
-    left: 2vw;
-    margin: 1vw;
     position: relative;
     grid-column-start: 2;
     grid-column-end: 3;
